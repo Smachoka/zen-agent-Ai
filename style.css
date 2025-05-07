@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #001a72;
+  color: white;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 4rem 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.125rem;
+  margin-top: 3rem;
+  max-width: 500px;
+}
+
+.logo {
+  margin-top: 4rem;
+  width: 140px;
+}
+
+.hero-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.circuit-corner {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  opacity: 0.2;
+}
+@media (max-width: 768px) {
+  .zen-heading {
+    font-size: 1.5rem !important;
+  }
+}
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1.2s ease-out;
+}
+
+.scroll-animate.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
