@@ -431,13 +431,20 @@
       </div>
     </section>
 
-    <!-- Contact Section -->
     <section class="py-5 text-white" style="background-color: #001645">
       <div class="container scroll-animate">
         <h2 class="fw-bold mb-4 zen-heading scroll-animate" style="font-size: 3rem">
           Join The Waitlist
         </h2>
-        <form>
+    
+        <form
+          action="https://formsubmit.co/info@zendawa.africa"
+          method="POST"
+          target="hidden_iframe"
+          onsubmit="showPopup(); return true;"
+        >
+          <input type="hidden" name="_captcha" value="false">
+    
           <div class="row mb-3">
             <div class="col-md-6">
               <label for="name" class="form-label">Name</label>
@@ -445,6 +452,7 @@
                 type="text"
                 class="form-control"
                 id="name"
+                name="name"
                 placeholder="Enter your name"
                 required
               />
@@ -455,6 +463,7 @@
                 type="tel"
                 class="form-control"
                 id="contact"
+                name="contact"
                 placeholder="Enter your contact number"
                 required
               />
@@ -462,9 +471,26 @@
           </div>
           <button type="submit" class="btn btn-light mt-3">Submit</button>
         </form>
+    
+        <!-- Hidden iframe to avoid redirect -->
+        <iframe name="hidden_iframe" style="display:none;"></iframe>
       </div>
     </section>
-
+    
+    <!-- Bootstrap Modal -->
+    <div class="modal fade" id="thankYouModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-dark">
+          <div class="modal-header">
+            <h5 class="modal-title">Thank You!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            🎉 You're on the waitlist! We'll be in touch soon.
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Footer -->
     <footer
       class="text-center text-white py-4"

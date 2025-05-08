@@ -17,3 +17,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   elements.forEach((el) => observer.observe(el));
 });
+function showPopup() {
+  setTimeout(() => {
+    const modal = new bootstrap.Modal(document.getElementById("thankYouModal"));
+    modal.show();
+    document.querySelector("form").reset(); // Clear form
+  }, 1000); // Small delay to ensure form is submitted
+}
